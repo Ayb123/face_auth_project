@@ -160,13 +160,6 @@ input[type="file"]::file-selector-button {
 input[type="file"]::file-selector-button:hover {
     background-color: #265df2;
 }
-#flash-messages {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-    width: 300px;
-}
 
 /* Style pour les messages de bienvenue */
 .welcome-message {
@@ -175,71 +168,7 @@ input[type="file"]::file-selector-button:hover {
     margin: 2rem 0;
 }
 
-.profile-photo {
-    display: block;
-    margin: 1rem auto;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-#flash-messages {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-    width: 300px;
-}
 
-.flash-message {
-    padding: 15px 20px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.flash-message i {
-    margin-right: 10px;
-    font-size: 18px;
-}
-
-/* Style pour les messages de succès */
-.flash-message.success {
-    background-color: #d4edda;
-    color: #155724;
-    border-left: 5px solid #28a745;
-}
-
-.flash-message.success i {
-    color: #28a745;
-}
-
-/* Style pour les messages d'erreur */
-.flash-message.error {
-    background-color: #f8d7da;
-    color: #721c24;
-    border-left: 5px solid #dc3545;
-}
-
-.flash-message.error i {
-    color: #dc3545;
-}
-
-/* Animation d'apparition */
-.flash-message.show {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.flash-message.hide {
-    opacity: 0;
-    transform: translateX(100%);
-}
 .redirect-link {
     margin-top: 20px;
     text-align: center;
