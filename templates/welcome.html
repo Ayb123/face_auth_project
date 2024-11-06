@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style_home.css') }}">
+
+
+<!-- Main Content Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h2 class="welcome-message">Bonjour, {{ name }} !</h2>
+
+        <!-- Afficher l'image de profil -->
+        {% if image_path %}
+            <img src="{{ url_for('static', filename=image_path) }}" alt="Photo de profil" class="profile-photo"/>
+        {% endif %}
+
+        <p>FaceAuth est une solution de sécurité innovante utilisant la reconnaissance faciale pour une connexion rapide et sécurisée. Inscrivez-vous pour découvrir la nouvelle façon de vous connecter !</p>
+        
+        <!-- Formulaire de déconnexion -->
+        
+    </div>
+    <div class="hero-image">
+        <img src="{{ url_for('static', filename='images/OSK.jpg') }}" alt="Reconnaissance faciale" />
+    </div>
+</section>
+{% endblock %}

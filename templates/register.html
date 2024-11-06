@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Inscription{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style_home.css') }}">
+<div class="form signup">
+    <h2 class="title">Inscription</h2>
+    <form action="{{ url_for('register.register') }}" method="POST" enctype="multipart/form-data">
+        <div class="input-field">
+            <i class="fas fa-user icon"></i>
+            <input type="text" name="name" placeholder="Username" required>
+        </div>
+        <div class="input-field">
+            <i class="fas fa-envelope icon"></i>
+            <input type="email" name="email" placeholder="Email" required>
+        </div>
+        <div class="input-field">
+            <i class="fas fa-lock icon"></i>
+            <input type="password" name="password" placeholder="Mot de passe" required>
+        </div>
+        <div class="input-field">
+            <i class="fas fa-calendar icon"></i>
+            <input type="date" name="birthdate" placeholder="Date de naissance" required>
+        </div>
+        <div class="input-field">
+            <input type="file" name="image" accept=".png, .jpg, .jpeg" required>
+        </div>
+        <div class="button">
+            <input type="submit" value="S'inscrire">
+        </div>
+        <div class="redirect-link">
+            <p>Vous avez déjà un compte ? <a href="{{ url_for('login.login') }}">Connectez-vous ici</a>.</p>
+        </div>
+    </form>
+</div>
+{% endblock %}

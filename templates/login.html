@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}Connexion{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style_home.css') }}">
+
+<div class="form login">
+    <h2 class="title">Connexion</h2>
+    <div class="toggle-buttons">
+        <button type="button" id="emailLoginButton" class="toggle-btn active">Se connecter avec Email</button>
+        <button type="button" id="facialLoginButton" class="toggle-btn">Reconnaissance Faciale</button>
+    </div>
+    
+    <form action="{{ url_for('login.login') }}" method="POST">
+        <!-- Email and Password Login Fields -->
+        <div id="emailPasswordSection" class="input-section">
+            <div class="input-field">
+                <i class="fas fa-envelope icon"></i>
+                <input type="email" name="email" id="email" placeholder="Entrez votre email">
+            </div>
+            <div class="input-field">
+                <i class="fas fa-lock icon"></i>
+                <input type="password" name="password" id="password" placeholder="Entrez votre mot de passe">
+            </div>
+            <div class="button">
+                <input type="submit" value="Se connecter">
+            </div>
+        </div>
+
+        <!-- Facial Recognition Section -->
+        <div id="facialRecognitionSection" class="input-section" style="display: none;">
+            <div class="button facial-recognition-button">
+                <i class="fas fa-camera icon"></i>
+                <input type="submit" value="Se connecter avec reconnaissance faciale">
+            </div>
+        </div>
+        
+        <div class="redirect-link">
+            <p>Pas encore de compte ? <a href="{{ url_for('register.register') }}">Inscrivez-vous ici</a>.</p>
+        </div>
+    </form>
+</div>
+
+<script>
+    // JavaScript to toggle sections
+    document.getElementById('emailLoginButton').addEventListener('click', function() {
+        document.getElementById('emailPasswordSection').style.display = 'block';
+        document.getElementById('facialRecognitionSection').style.display = 'none';
+        this.classList.add('active');
+        document.getElementById('facialLoginButton').classList.remove('active');
+    });
+
+    document.getElementById('facialLoginButton').addEventListener('click', function() {
+        document.getElementById('emailPasswordSection').style.display = 'none';
+        document.getElementById('facialRecognitionSection').style.display = 'block';
+        this.classList.add('active');
+        document.getElementById('emailLoginButton').classList.remove('active');
+    });
+</script>
+{% endblock %}

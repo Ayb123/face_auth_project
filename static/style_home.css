@@ -1,0 +1,252 @@
+/* Global reset for consistent styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body and general page settings */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo h1 {
+    color: #4c68d7;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.navbar-links .nav-btn {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #4c68d7;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: 1px solid #4c68d7;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navbar-links .nav-btn:hover {
+    background-color: #4c68d7;
+    color: #ffffff;
+}
+
+/* Hero section styling */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #e8f0ff;
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: 30px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    gap: 20px;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.hero-buttons .btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.primary-btn {
+    background-color: #4c68d7;
+    color: #ffffff;
+}
+
+.primary-btn:hover {
+    background-color: #3a54b6;
+}
+
+.secondary-btn {
+    background-color: #ffffff;
+    color: #4c68d7;
+    border: 1px solid #4c68d7;
+}
+
+.secondary-btn:hover {
+    background-color: #f0f3ff;
+}
+
+/* Hero image styling */
+.hero-image img {
+    max-width: 450px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Welcome container */
+.welcome-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+}
+
+.welcome-message {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.profile-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logout button */
+.logout-form {
+    margin-top: 10px;
+}
+
+.logout-button {
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+    background-color: #e63939;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .navbar-logo h1 {
+        font-size: 1.5em;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-content h2 {
+        font-size: 2em;
+    }
+
+    .hero-image img {
+        max-width: 300px;
+    }
+}
+.btn-danger {
+    display: inline-block; /* Pour faire un bouton en ligne */
+    padding: 10px 15px; /* Ajoute un peu de rembourrage */
+    background-color: red; /* Couleur de fond rouge */
+    color: white; /* Couleur du texte */
+    text-decoration: none; /* Pas de soulignement */
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s; /* Transition pour le survol */
+}
+
+.btn-danger:hover {
+    background-color: rgb(217, 13, 13); /* Couleur de fond au survol */
+}
+.toggle-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.toggle-btn {
+    padding: 10px 20px;
+    border: none;
+    background: #eee;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.toggle-btn.active {
+    background: #4285F4;
+    color: #fff;
+}
+/* Video Container Styling */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 320px;
+    max-height: 240px;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    left: 20px;
+}
+
+/* Scanner Overlay Animation */
+.scanner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 255, 0.2); /* Blue semi-transparent overlay */
+    animation: scanning 2s infinite linear;
+}
+
+@keyframes scanning {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}

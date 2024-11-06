@@ -1,0 +1,17 @@
+<!-- header.html -->
+ 
+<nav class="navbar">
+    <div class="navbar-logo">
+        <h1><a href="{{ url_for('index') }}" style="text-decoration: none; color: inherit;">FaceAuth</a></h1>
+    </div>
+    {% if request.endpoint not in ['login.login', 'register.register','welcome'] %}
+        <div class="navbar-links">
+            <a href="{{ url_for('register.register') }}" class="nav-btn">S'inscrire</a>
+            <a href="{{ url_for('login.login') }}" class="nav-btn">Se connecter</a>
+        </div>
+    {% endif %}
+    
+    {% if request.endpoint == 'welcome' %}
+    <a href="{{ url_for('logout.logout') }}" class="btn btn-danger">Déconnexion</a>
+{% endif %}
+</nav>

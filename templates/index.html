@@ -1,0 +1,17 @@
+{% block content %}
+    <!-- Navigation Bar -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_home.css') }}">
+    {% include 'header.html' %}
+
+    <!-- Main Content Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Bienvenue sur notre application d'authentification par visage</h2>
+            <p>FaceAuth est une solution de sécurité innovante utilisant la reconnaissance faciale pour une connexion rapide et sécurisée. Inscrivez-vous pour découvrir la nouvelle façon de vous connecter !</p>
+           
+        </div>
+        <div class="hero-image">
+            <img src="{{ url_for('static', filename='images/OSK.jpg') }}" alt="Reconnaissance faciale" />
+        </div>
+    </section>
+{% endblock %}
